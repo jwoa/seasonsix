@@ -1,0 +1,731 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,500,900';
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 16%;
+}
+
+#nav {
+    padding-bottom: 10px;
+    padding-top: 10px;
+/*
+    padding-left: 3vw;
+    padding-right: 3vw;
+*/
+}
+
+.logosvi {
+    margin-top: 12px !important;
+}
+
+ul {
+    text-decoration: none !important;
+    display: inline !important;
+    float: right !important;
+    /*vertical-align: middle !important;*/
+    padding-bottom: 10px !important;
+    margin-bottom: 0px !important;
+/*    margin-top: 10px !important;*/
+}
+
+li {
+    display: inline !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400;
+    margin-right: 4px !important;
+    margin-bottom: 4px !important;
+    /*vertical-align: middle !important;*/
+}
+
+li a {
+    text-decoration: none;
+    color: #000000;
+    /*vertical-align: middle !important;*/
+}
+
+.active {
+    text-decoration: underline;
+    padding-top: 5px;
+}
+
+.home {
+    color: #ffffff;
+}
+
+#example4 {
+    font-size: 50px;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+#wrapper {
+    width: 90% !important;
+    margin: 0 auto !important;
+/*    padding: 20px;*/
+}
+
+#wwydbanner {
+    width: 100%;
+    height: 425px;
+    margin-top: 6vh;
+    background-color: #000000;
+}
+
+#wwydbanner img {
+    text-align: center;
+    margin: 0 auto;
+    display: inherit;
+}
+
+.wwydbanner {
+    height: 425px;
+}
+
+#left {
+/*    width: 46%;*/
+    width: 50%;
+    float: left;
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+/*    margin-left: 3vw;*/
+}
+
+#contact {
+    width: 46%;
+    float: left;
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+/*    margin-left: 3vw;*/
+}
+
+#right {
+    width: 50%;
+    float: right;
+    margin-top: 150px;
+}
+
+#left_project {
+    width: 50%;
+    float: left;
+    margin-top: 2vh;
+    clear: both;
+    display: inline;
+}
+
+#right_project {
+    width: 50%;
+    float: right;
+    margin-top: 2vh;
+}
+
+#right_project h3 {
+    padding-left: 20px;
+    margin-top: -6px;
+}
+
+#right_project p {
+    padding-left: 20px;
+}
+
+.wireframes {
+    margin-left: 0vw;
+}
+
+#wireframes {
+    width: 100%;
+    display: inline-block;
+}
+
+.finalimage {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-left: 3vw;
+    margin-top: 10vh;
+}
+
+.about_title {
+    margin-left: 0vw !important;
+    margin-top: 0vh !important
+}
+
+.project_title {
+    margin-left: 0vw !important;
+    margin-top: 3vh !important
+}
+
+.about {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+    padding-right: 30px;
+}
+
+#page-wrapper {
+    width: 50%;
+    /* background: #FFFFFF;
+  padding: 1em;
+  margin: 1em auto;
+  border-top: 5px solid #69c773;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);*/
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.field {
+    margin: 1em 0;
+}
+
+label {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    color: #999999;
+}
+
+input {
+    width: 100%;
+    padding: 0.5em 0.5em;
+    font-size: 1em;
+    border: none;
+    /*border-radius: 3px;
+  border: 1px solid #D9D9D9;*/
+    border-bottom: 1px solid #D9D9D9;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 0.5em 0.5em;
+    font-size: 1.2em;
+    /*border-radius: 3px;*/
+    border: none;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+
+
+.success {
+    padding: 1em;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #468847;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.error {
+    padding: 1em;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #b94a48;
+    background-color: #f2dede;
+    border: 1px solid rgba(185, 74, 72, 0.3);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+iframe {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+    #right {
+        width: 100%;
+        margin-top: 50px;
+        margin-top: -75vh;
+    }
+    #left {
+        width: 100%;
+        position: static;
+        margin-top: 35vh;
+        top: auto;
+        opacity: 1.0;
+        transform: none;
+        -webkit-transform: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #left_project {
+        width: 100% !important;
+    }
+    #right_project {
+        width: 100% !important;
+    }
+    button:nth-of-type(1) {
+        margin-left: 35% !important;
+    }
+    .wire_pic {
+        width: 45vw !important;
+    }
+    #wwydbanner {
+        height: auto;
+    }
+    #wwydbanner img {
+        width: 100%;
+        height: auto;
+    }
+    .oasis_logo {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .about {
+        margin-top: -40px;
+    }
+    #page-wrapper {
+        width: 80%;
+    }
+    #lineDrawing {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 670px) {
+    .wire_pic {
+        width: 95vw !important;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #contact {
+        width: 100%;
+    }
+    #contact p {
+        margin-right: 5vw;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #right {
+        margin-top: -107vh !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #right {
+        margin-top: -85vh;
+    }
+    button:nth-of-type(1) {
+        margin-left: 25% !important;
+    }
+    .item {
+        margin-left: 0px !important;
+    }
+}
+
+.item {
+    width: 31%;
+    display: inline-block;
+    margin: 9px;
+}
+
+.item.item1 {
+/*    padding-left: 0;*/
+}
+
+.wire_pic {
+    width: 30vw;
+    display: inline-block;
+}
+
+.wire_pic img {
+    border: 1px solid #919191;
+}
+
+.border {
+    border: 1px solid #EDEDED;
+}
+
+section {
+	position: relative;
+	z-index: 1;
+	max-width: 19rem;
+}
+
+/* Logo */
+
+.logo {
+	opacity: 0;
+	position: relative;
+	margin-left: -3.5rem;
+	margin-top: -8rem;
+	margin-bottom: .75rem;
+	font-size: 8px;
+}
+
+body.ready .logo {
+	opacity: 1;
+}
+
+body:not(.iOS) #lines * {
+  mix-blend-mode: lighten;
+}
+
+#fills * {
+  opacity: 0;
+  mix-blend-mode: lighten;
+}
+
+#line-i-1 {
+/*  transform-origin: 30em 8em;*/
+}
+
+/* Fireworks */
+
+.fireworks {
+  position: absolute;
+	top: 0;
+	left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div#lineDrawing {
+    /* height: 400px; */
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact {
+    text-decoration: none;
+    color: dimgray;
+    font-weight: 400;
+}
+
+#projects {
+    margin: 0 auto;
+/*
+    margin-left: 3vw;
+    margin-right: 3vw;
+*/
+}
+
+/* Smaller Widths & Mobile */
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) { 
+    .item {
+        display: block;
+        width: 90vw;
+        padding: 1vw;
+/*        margin: 0 auto;*/
+    }
+    
+    li a {
+        font-size: 0.9em;
+    }
+    
+    img.finalimage {
+        width: 100% !important;
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 925px) {
+    .item {
+        width: 100% !important;
+    }
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 700px) { 
+    #left_project {
+        width: 100%;
+    }
+    #right_project {
+        width: 100%;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) { 
+    .item {
+        display: inline-block;
+        width: 100%;
+        padding: 0px;
+    }
+    
+    .projects {
+        text-align: left;
+        margin: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) { 
+    .item {
+        display: inline-block;
+        width: 47%;
+        padding: 0px;
+    }
+    
+    img.finalimage {
+        width: 100%;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1196px) { 
+    .item {
+        width: 30% !important;
+    }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+}
+
+.mfadt {
+    color: #ff0000;
+}
+
+#left_blog {
+    width: 60vw;
+    margin-left: 1vw;
+    display: inline-block;
+}
+
+#left_blog img {
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar {
+    width: 25vw;
+    /* text-align: center; */
+    /* display: inline-block; */
+    float: right;
+}
+
+h3.widget-title {
+    text-align: center;
+}
+
+a.me_blog {
+    text-align: center;
+    /* margin: 0 auto; */
+    display: block;
+}
+
+.bio {
+    font-weight: inherit;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+hr {
+    border: 1px solid !important;
+    color: #ededed !important;
+    float: left;
+    margin-left: 3vw;
+    width: 100%;
+}
+
+.mfadt_title {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 0px;
+}
+
+.mfadt_title a {
+    color: #000;
+}
+
+h2 a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700px;
+    padding-left: 0px;
+}
+
+ul.post-categories {
+    float: none !important;
+    clear: both;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+/*    font-family: 'Open Sans', sans-serif;*/
+    font-weight: 300;
+}
+
+#left_blog h2 {
+    padding-left: 0px;
+}
+
+#header_banner {
+    width: 101vw;
+    margin-left: -1vw;
+    margin-bottom: 50px;
+}
+
+/* PROJECT PAGE TEMPLATE */
+#project_body {
+    /*margin-left: 5vw;
+    margin-right: 5vw;
+    margin: 0 auto;*/
+    width: 80%;
+    margin: 0 auto;
+}
+
+.banner {
+    width: 100%;
+/*    width: 92.5vw;*/
+    margin-top: 6vh;
+}
+
+.project_text {
+    padding-left: 8px;
+}
+
+.project_feature {
+/*    margin-left: 10%;*/
+}
+
+.portfolio_image {
+    margin-left: 12vw;
+}
+
+.siema {
+/*  margin: 1rem 0;*/
+/*
+    margin-top: 50px;
+    margin-bottom: 50px;
+*/
+    position: relative;
+}
+
+button:nth-of-type(1) {
+/*  position: absolute;*/
+  margin-left: 17.5vw;
+  top: 50%;
+}
+
+button:nth-of-type(2) {
+/*  position: absolute;*/
+  right: 0;
+  top: 50%;
+}
+
+#oasis_logo {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.oasis_logo {
+    width: 30%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.status.open:before {
+  background-color: #94E185;
+  border-color: #78D965;
+  box-shadow: 0px 0px 4px 1px #94E185;
+}
+.status.in-progress:before {
+  background-color: #FFC182;
+  border-color: #FFB161;
+  box-shadow: 0px 0px 4px 1px #FFC182;
+}
+.status.dead:before {
+  background-color: #C9404D;
+  border-color: #C42C3B;
+  box-shadow: 0px 0px 4px 1px #C9404D;
+}
+.status:before {
+  content: ' ';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  border: 1px solid #000;
+  border-radius: 7px;
+}
+
+div#left_project img {
+    width: 100%;
+}
+
+div#right_project img {
+    width: 100%;
+}
+
+.port_img_one {
+    width: 80% !important;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+#portfolio_wrapper {
+    height: auto;
+    width: 100%;
+    display: inline-block;
+}
+
+.caption {
+    color: #e0e0e0;
+    font-style: italic;
+}
+
+#footer {
+    width: 100%;
+    border-top: 1px solid #ededed;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    color: #ededed;
+    font-size: 0.7em;
+    margin-top: 20px;
+}
+
+#oasis_video {
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ededed;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWA Portfolio</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
+    <meta name="keywords" content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
+    <meta name="Resource-type" content="Document" />
+<!--    <link rel="stylesheet" type="text/css" href="jquery.multiscroll.css" />-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <!-- Load the script on the page. -->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.2.3/typeit.min.js"></script>
+    <!---->
+    <script type="text/javascript" src="jquery.easings.min.js"></script>
+    <script type="text/javascript" src="jquery.multiscroll.js"></script>
+    <script type="text/javascript">
+        <!--
+        if (screen.width <= 930) {
+            window.location = "http://portfolio.seasonsix.co/mobile";
+        }
+        //-->
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myContainer').multiscroll({
+                sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF']
+                , anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth']
+                , menu: '#menu'
+                , navigation: true
+                , navigationTooltips: ['About', 'OASIS', 'homies', 'Desktop', 'Religion', 'Fruits']
+                , loopBottom: true
+                , loopTop: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--
+    <ul id="menu">
+        <li data-menuanchor="first"><a href="#first">First slide</a></li>
+        <li data-menuanchor="second"><a href="#second">Second slide</a></li>
+        <li data-menuanchor="third"><a href="#third">Third slide</a></li>
+    </ul>
+-->
+    <div id="myContainer">
+        <div class="ms-left">
+            <div class="ms-section" id="left1"> </div>
+            <div class="ms-section" id="left2"> <img src="oasis.png" /> </div>
+            <div class="ms-section" id="left3"> <img src="homies.png" /> </div>
+            <div class="ms-section" id="left4"> <img src="svi.png" /> </div>
+            <div class="ms-section" id="left5"> <img src="religion.png" /> </div>
+            <div class="ms-section" id="left6"> <img src="fruits.png" /> </div>
+        </div>
+        <div class="ms-right">
+            <div class="ms-section" id="right1">
+                <div id="info">
+                    <h2>Jason Agyekum</h2>
+                    <h4>Interaction Designer</h4>
+                    <p>Hey there, I’m Jason Agyekum and I’m a designer <span style="font-family: Arial;">+</span> developer who hopes to make cool and useful things for people. Although I started with only making websites I found that there were more possibilities to create greater things with interaction design and I’ve changed my path ever since.
+                        <br>
+                        <br>The great thing about interaction design is that it can applied to different mediums like websites, products, services etc. The possibilities are endless and I would love to further develop my skills so I can take them on.
+                        <br>
+                        <br>Scroll to view some of my personal projects that I am currently working on.</p>
+                    <a href="resume.pdf" target="_blank">
+                        <button class="about">RESUME</button>
+                    </a>
+                </div>
+            </div>
+            <div class="ms-section" id="right2">
+                <div id="info">
+                    <h2>Project OASIS</h2>
+                    <h4>Web Application</h4>
+                    <p id="example4"></p>
+                    <p>A lot of people, primarily minorities, live in places known as food deserts. and swamps. Due to this they have terrible diets and poor health but there is not much that they can do about it since the bulk of the food in their area are not good for them and those that aren’t bought as much.
+                        <br>
+                        <br>The primary purpose of this project is to show people wether or not they live in food swamps and if they do, what they can do to try and get healthier foods in their communities, how they can contact their local representatives to make a change and any other options. There are websites like this that exist but their design and functionality are just plain terrible. They live strictly to display data and they are not user friendly.They were not made for people to use but more so made for researchers and data analysis.
+                        <br>
+                        <br>OASIS is going to make this user friendly for everyone.</p>
+                    <a href="oasis.html" target="_blank">
+                        <button class="oasis">View Project</button>
+                    </a>
+                </div>
+            </div>
+            <div class="ms-section" id="right3">
+                <div id="info">
+                    <h2>homies</h2>
+                    <h4>iOS Application</h4>
+                    <p>I wanted to take a shot at designing a mobile app, but one that would be needed. Something that I could relate to and something that I know wouldn’t just sit in the App Store collecting dust. So I thought about something that could help me and my homies.
+                        <br>
+                        <br>When you live with other people it’s important for you all to be on the same page. Although the App Store has numerous apps that help with living with someone there’s not one cohesive fun app to make everything simple.
+                        <br>
+                        <br>Living with two of my best friends I realized how “clutch” it would be to have something that can take of everything and simplify our complications. So I decided to do something about it.</p>
+                    <a href="homies.html" target="_blank">
+                        <button class="homies">View Project</button>
+                    </a>
+                </div>
+            </div>
+            <div class="ms-section" id="right4">
+                <div id="info">
+                    <h2>(SVI).web</h2>
+                    <h4>An Interactive Desktop</h4>
+                    <p>“Yo bro can I see the pictures?”
+                        <br> “You using your computer?”
+                        <br> “Remember when . . . ?”
+                        <br>
+                        <br>These were things I used to hear all the time that would prompt me to let my friends use my laptop. Throughout my four years of undergraduate at UAlbany I would document a lot of the things that me and my friends did. They always wanted to reminisce and I don’t blame them.
+                        <br>
+                        <br>So instead of always giving them my laptop I figured I’d give them a cool way to view the photos and “use my computer” rather than just send them a Flickr link.</p>
+                    <a href="svi.html" target="_blank">
+                        <button class="religion">View Project</button>
+                    </a>
+                </div>
+            </div>
+            <div class="ms-section" id="right5">
+                <div id="info">
+                    <h2>D.I.Y Religion</h2>
+                    <h4>Glitch Experiment</h4>
+                    <p>One of my best friends, Jamal (Mally), once spoke to me about how we all follow the same path and engage in certain social experiences depending on where we live.
+                        <br>
+                        <br>This whole idea of following the same path and viewing things differently led my mind to religion. A construct with numerous similarities across all variations and a shared goal of peace, love, and respect for others as well as God. Yet it is the cause of millions of deaths and wars. A path with the same destination but depending on how you decide to travel your experience is either slightly or completely different.
+                        <br>
+                        <br>This project shows what happens when an individual puts his perspective on religion. </p>
+                    <a href="religion.html" target="_blank">
+                        <button class="religion">View Project</button>
+                    </a>
+                </div>
+            </div>
+            <div class="ms-section" id="right6">
+                <div id="info">
+                    <h2>Fruits</h2>
+                    <h4>Glitch Experiment</h4>
+                    <p>I was going through, actually I am still in it, a phase of trying to eat healthy and more organic products. However, I had not done any real research into the matter, I just thought that eating fruits and cutting out the junk would work. After looking into where my fruits were coming from and what was actually in most of them I decided to make a statement with it.
+                        <br>
+                        <br>The images below were opened in a text editor and the pledge of Monsanto, a company known for genetically modifying fruits, was inserted into it. Their logo was then placed in the middle of the fruit with a background of chemicals being sprayed onto the produce. </p>
+                    <a href="fruits.html" target="_blank">
+                        <button class="fruits">View Project</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#example4').typeIt({
+            speed: 50
+            , autoStart: false
+        }).tiType('Wll').tiPause(500).tiDelete(2).tiType('ell, ').tiPause(1000).tiType('we create things').tiPause(400).tiDelete(16).tiType('I create things I like').tiBreak().tiPause(750).tiType(' but I also solve problems').tiSettings({
+            speed: 700
+        }).tiType('...').tiPause(750).tiSettings({
+            speed: 50
+        }).tiDelete().tiType('that\s it').tiPause(750).tiSettings({
+            speed: 50
+        }).tiDelete().tiType('I\'m a creative problem solver.');
+    </script>
+    <script type="text/javascript">
+        function ran_col() { //function name
+            var color = '#'; // hexadecimal starting symbol
+            var letters = ['000000', '313E50', 'DB5461']; //Set your colors here
+            color += letters[Math.floor(Math.random() * letters.length)];
+            document.getElementById('full').style.background = color; // Setting the random color on your div element.
+        }
+    </script>
+</body>
+
+</html>

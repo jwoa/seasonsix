@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWA Portfolio</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
+    <meta name="keywords" content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
+    <meta name="Resource-type" content="Document" />
+    <link rel="stylesheet" type="text/css" href="jquery.multiscroll.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easings.min.js"></script>
+    <script type="text/javascript" src="jquery.multiscroll.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myContainer').multiscroll({
+                sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF']
+                , anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth']
+                , menu: '#menu'
+                , navigation: true
+                , navigationTooltips: ['About', 'OASIS', 'homies', 'Desktop', 'Religion', 'Fruits']
+                , loopBottom: true
+                , loopTop: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!----------------------------------- MOBILE SITE ----------------------------------->
+    <div id="first">
+        <h2>Jason Agyekum</h2>
+        <h4>Interaction Designer</h4>
+        <p class="pj">Hey there, I’m Jason Agyekum and I’m a designer <span style="font-family: Arial;">+</span> developer who hopes to make cool and useful things for people. Although I started with only making websites I found that there were more possibilities to create greater things with interaction design and I’ve changed my path ever since.
+            <br>
+            <br>The great thing about interaction design is that it can applied to different mediums like websites, products, services etc. The possibilities are endless and I would love to further develop my skills so I can take them on.
+            <br>
+            <br>Scroll to view some of my personal projects that I am currently working on.
+            <a href="resume.pdf" target="_blank">
+                <button class="about">RESUME</button>
+            </a>
+        </p>
+    </div>
+    <div id="second">
+        <div class="s2"></div>
+        <div class="s2">
+            <h3>Project OASIS</h3>
+            <p class="mp">
+                <br>The primary purpose of this project is to show people wether or not they live in food swamps and if they do, what they can do to try and get healthier foods in their communities, how they can contact their local representatives to make a change and any other options. </p>
+            <a href="oasis.html" target="_blank">
+                <button class="oasismb">View Project</button>
+            </a>
+        </div>
+    </div>
+    <div id="third">
+        <div class="s3"><img src="images/homiesm.png" class="homiesm" /></div>
+        <div class="s3">
+            <h3>homies</h3>
+            <p class="mp">
+                <!--I wanted to take a shot at designing a mobile app, but one that would be needed. Something that I could relate to and something that I know wouldn’t just sit in the App Store collecting dust. So I thought about something that could help me and my homies.
+                <br>-->
+                <br>When you live with other people it’s important for you all to be on the same page. Although the App Store has numerous apps that help with living with someone there’s not one cohesive fun app to make everything simple.
+                <br>
+                <br>Living with two of my best friends I realized how “clutch” it would be to have something that can take of everything and simplify our complications. So I decided to do something about it.</p>
+            <a href="homies.html" target="_blank">
+                <button class="homiesmb">View Project</button>
+            </a>
+        </div>
+    </div>
+    <div id="fourth">
+        <div class="s4"></div>
+        <div class="s4">
+            <h3>(SVI).website</h3>
+            <p class="mp">Throughout my four years of undergraduate at UAlbany I would document a lot of the things that me and my friends did. They always wanted to reminisce and I don’t blame them. So instead of always giving them my laptop I figured I’d give them a cool way to view the photos and “use my computer” rather than just send them a Flickr link.</p>
+            <a href="svi.html" target="_blank">
+                <button class="religionmb">View Project</button>
+            </a>
+        </div>
+    </div>
+    <div id="fifth">
+        <div class="s5"></div>
+        <div class="s5">
+            <h3>D.I.Y Religion</h3>
+            <p class="mp">One of my best friends, Jamal (Mally), once spoke to me about how we all follow the same path and engage in certain social experiences depending on where we live. But, because of perspective we all experience things differently. This whole idea of following the same path and viewing things differently led my mind to religion. A construct with numerous similarities across all variations and a shared goal of peace, love, and respect for others as well as God. Yet it is the cause of millions of deaths and wars. This projects looks into it.</p>
+            <a href="religion.html" target="_blank">
+                <button class="religionmb">View Project</button>
+            </a>
+        </div>
+    </div>
+    <div id="sixth">
+        <div class="s6"></div>
+        <div class="s6">
+            <h3>Fruits</h3>
+            <p class="mp">I was going through, actually I am still in it, a phase of trying to eat healthy and more organic products. However, I had not done any real research into the matter, I just thought that eating fruits and cutting out the junk would work. After looking into where my fruits were coming from and what was actually in most of them I decided to make a statement with it. </p>
+            <a href="fruits.html" target="_blank">
+                <button class="fruitsmb">View Project</button>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

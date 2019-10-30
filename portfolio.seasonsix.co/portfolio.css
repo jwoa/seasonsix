@@ -1,0 +1,88 @@
+@CHARSET "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@font-face {
+    font-family: 'Campton Book';
+    src: url("/fonts/Campton-BoldDEMO.eot");
+    src: url("/fonts/Campton-BoldDEMO.eot?#iefix") format("embedded-opentype"), url("../fonts/Campton-BoldDEMO.woff") format("woff"), url("../fonts/Campton-BoldDEMO.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Campton Light';
+    src: url("/fonts/Campton-LightDEMO.eot");
+    src: url("/fonts/Campton-LightDEMO.eot?#iefix") format("embedded-opentype"), url("../fonts/Campton-LightDEMO.woff") format("woff"), url("../fonts/Campton-LightDEMO.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal
+}
+
+.pi {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+}
+
+.fruit {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Campton Book';
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Campton Book';
+}
+
+h3 {
+    font-family: 'Campton Light';
+
+}
+
+h4 {
+    font-family: 'Campton Light';
+    font-weight: bold;
+
+}
+
+p {
+    /*font-family: 'Open Sans', sans-serif;*/
+}
+
+li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: #1A1A1A;
+    background-color: #161616;
+    float: left;
+}
+
+@media screen and (max-width: 930px) {
+    p {
+        font-family: sans-serif;
+    }
+    h2 {
+        font-family: sans-serif;
+    }
+    h3 {
+        font-family: sans-serif;
+    }
+    h4 {
+        font-family: sans-serif;
+    }
+}
