@@ -20,16 +20,21 @@
         >
             <a-assets>
                 <a-asset-item
-                    id="animated-asset"
-                    src="assets/asset.gltf"
+                    id="hoodie-asset"
+                    src="assets/files/hoodie.gltf"
+                ></a-asset-item>
+                <a-asset-item
+                    id="pants-asset"
+                    src="assets/files/pants.gltf"
                 ></a-asset-item>
             </a-assets>
 
+            <!-- HOODIE AND SKIRT OUTFIT -->
             <a-marker
-                id="animated-marker"
+                id="animated-hoodie"
                 type="pattern"
                 preset="custom"
-                url="assets/marker.patt"
+                url="assets/markers/hoodie.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -39,7 +44,28 @@
                     id="bowser-model"
                     scale="0.002389720947315638 0.002389720947315638 0.002389720947315638"
                     animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
+                    gltf-model="#hoodie-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
+            <!-- PANTS -->
+            <a-marker
+                id="animated-pants"
+                type="pattern"
+                preset="custom"
+                url="assets/markers/pants.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerB"
+            >
+                <a-entity
+                    id="bowser-model"
+                    scale="0.002389720947315638 0.002389720947315638 0.002389720947315638"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#pants-asset"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
