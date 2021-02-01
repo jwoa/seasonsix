@@ -13,14 +13,14 @@
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: true;"
             renderer="logarithmicDepthBuffer: true;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: true;"
             id="scene"
             embedded
             gesture-detector
         >
             <!-- GLTF's -->
             <a-assets>
-                <a-asset-item
+                <!-- <a-asset-item
                     id="animated-asset"
                     src="assets/asset.gltf"
                 ></a-asset-item>
@@ -31,7 +31,7 @@
                 <a-asset-item
                     id="jacket-asset"
                     src="assets/jacket.gltf"
-                ></a-asset-item>
+                ></a-asset-item> -->
                 <a-asset-item
                     id="blackwoman-asset"
                     src="assets/blackwoman/scene.gltf"
@@ -39,7 +39,7 @@
             </a-assets>
 
             <!-- Pants -->
-            <a-marker
+            <!-- <a-marker
                 id="animated-marker"
                 type="pattern"
                 preset="custom"
@@ -57,10 +57,10 @@
                     class="clickable"
                     gesture-handler
                 ></a-entity>
-            </a-marker>
+            </a-marker> -->
 
             <!-- Hoodie & Skirt -->
-            <a-marker
+            <!-- <a-marker
                 id="animated-hoodie"
                 type="pattern"
                 preset="custom"
@@ -78,10 +78,10 @@
                     class="clickable"
                     gesture-handler
                 ></a-entity>
-            </a-marker>
+            </a-marker> -->
 
             <!-- Black Jacket -->
-            <a-marker
+            <!-- <a-marker
                 id="animated-jacket"
                 type="pattern"
                 preset="custom"
@@ -99,7 +99,7 @@
                     class="clickable"
                     gesture-handler
                 ></a-entity>
-            </a-marker>
+            </a-marker> -->
 
             <!-- Black Woman -->
             <a-marker
