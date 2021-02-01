@@ -11,7 +11,7 @@
     <body style="margin: 0; overflow: hidden;">
         <a-scene
             vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
+            loading-screen="enabled: true;"
             renderer="logarithmicDepthBuffer: true;"
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
             id="scene"
@@ -26,6 +26,10 @@
                 <a-asset-item
                     id="hoodie-asset"
                     src="assets/hoodie.gltf"
+                ></a-asset-item>
+                <a-asset-item
+                    id="jacket-asset"
+                    src="assets/jacket.gltf"
                 ></a-asset-item>
             </a-assets>
 
@@ -64,6 +68,26 @@
                     scale="0.002389720947315638 0.002389720947315638 0.002389720947315638"
                     animation-mixer="loop: repeat"
                     gltf-model="#hoodie-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
+            <a-marker
+                id="animated-jacket"
+                type="pattern"
+                preset="custom"
+                url="assets/jacket.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                    id="bowser-model"
+                    scale="1 1 1"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#jacket-asset"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
