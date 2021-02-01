@@ -18,6 +18,7 @@
             embedded
             gesture-detector
         >
+            <!-- GLTF's -->
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
@@ -31,8 +32,13 @@
                     id="jacket-asset"
                     src="assets/jacket.gltf"
                 ></a-asset-item>
+                <a-asset-item
+                    id="blackwoman-asset"
+                    src="assets/blackwoman/scene.gltf"
+                ></a-asset-item>
             </a-assets>
 
+            <!-- Pants -->
             <a-marker
                 id="animated-marker"
                 type="pattern"
@@ -53,6 +59,7 @@
                 ></a-entity>
             </a-marker>
 
+            <!-- Hoodie & Skirt -->
             <a-marker
                 id="animated-hoodie"
                 type="pattern"
@@ -73,6 +80,7 @@
                 ></a-entity>
             </a-marker>
 
+            <!-- Black Jacket -->
             <a-marker
                 id="animated-jacket"
                 type="pattern"
@@ -88,6 +96,27 @@
                     scale="1 1 1"
                     animation-mixer="loop: repeat"
                     gltf-model="#jacket-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
+            <!-- Black Woman -->
+            <a-marker
+                id="animated-woman"
+                type="pattern"
+                preset="custom"
+                url="assets/blackwoman/black-woman.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                    id="bowser-model"
+                    scale="1 1 1"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#blackwoman-asset"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
