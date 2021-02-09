@@ -1,0 +1,250 @@
+<html> 
+  
+  <title>SVI AR/VR</title>
+  
+  <head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"> </script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="js/audiocontrols.js"></script>
+    <script src="js/videocontrols.js"></script>
+  </head>
+  
+  <body>
+    
+   <a-scene >
+       
+      <!-- Asset Manager -->
+      <a-assets>
+         <img id="woodfloor" src="assets/images/floor.jpg">
+         <img id="wall" src="assets/images/wall.jpg">
+         <img id="starsky" src="assets/images/sky.jpg">
+         <img id="picasso" src="assets/images/picasso.jpg">
+         <img id="michelle" src="assets/images/michelle.png">
+         <img id="barack" src="assets/images/barack.png">
+         <a-asset-item 
+            id="skirthoodie" 
+            src="assets/models/skirthoodie.glb"
+         response-type="arraybuffer"></a-asset-item>
+         <a-asset-item 
+            id="jacket" 
+            src="assets/models/jacket.glb"
+         response-type="arraybuffer"></a-asset-item>
+         <a-asset-item 
+            id="skirt" 
+            src="assets/models/skirt.glb"
+         response-type="arraybuffer"></a-asset-item>
+         <a-asset-item 
+            id="woman" 
+            src="assets/models/blackwoman.glb"
+         response-type="arraybuffer"></a-asset-item>
+         <img id="cover1" src="assets/images/begood.png" crossorigin="anonymous">
+         <img id="cover2" src="assets/images/omw.jpg" crossorigin="anonymous">
+         <img id="cover3" src="assets/images/smooth.jpg" crossorigin="anonymous">
+         <img id="cover4" src="assets/images/money.jpg" crossorigin="anonymous">
+         <audio id="song1" src="assets/music/BeGood.mp3" preload="auto" crossorigin="anonymous"></audio>
+         <audio id="song2" src="assets/music/OnMyWay.mp3" preload="auto" crossorigin="anonymous"></audio>
+         <audio id="song3" src="assets/music/smooth.mp3" preload="auto" crossorigin="anonymous"></audio>
+         <audio id="song4" src="assets/music/money.mp3" preload="auto" crossorigin="anonymous"></audio>
+         <video id="videoclip" autoplay loop="true" src="assets/videos/binz.mp4" crossorigin="anonymous"></video>
+      </a-assets>
+             
+      <a-entity id="camera" position="0 1.6 0" camera look-controls wasd-controls>
+        <a-entity cursor="rayOrigin: mouse"></a-entity>
+      </a-entity>
+      
+      <a-entity laser-controls="hand:right"></a-entity>
+      <a-sky id="sky" src="#starsky"></a-sky>
+       
+      <!-- Building -->
+      <a-entity id="architecture">
+         <a-plane id="floor" rotation="-90 90 0" width="30" height="30" src="#woodfloor" repeat="4 4"></a-plane>
+         <a-plane position="0 5 -15" width="30" height="10" src="#wall" repeat="2 1"></a-plane>
+         <a-plane position="0 5 15" rotation="0 180 0" width="30" height="10" src="#wall" repeat="2 1"></a-plane>
+         <a-plane position="-15 5 0" rotation="0 90 0" width="30" height="10" src="#wall" repeat="2 1"></a-plane>
+         <a-plane position="15 5 0" rotation="0 -90 0" width="30" height="10" src="#wall" repeat="2 1"></a-plane>
+         <a-plane id = "ceiling" position="0 10 0" scale="1 1 1" width="30" height="30" rotation="90 0 0"
+           material="metalness:1; roughness:0; transparent: true; opacity: .7; shader: standard; 
+           color: #faaf52; side:double;"   ></a-plane>
+      </a-entity>
+       
+      <!-- ART -->
+      <a-entity id="picassodisplay" position="0 3 -14.9">
+         <a-plane id="picassoframe" color="#191817" width="3" height="4" position="0 2 0"></a-plane>
+         <a-plane id="picassopainting" src="#picasso" position="0 2 .1" width="2.5" height="3.5" ></a-plane>
+         <a-plane id="picassocaption" position="0 -1 .01" height=".6" width="auto" color="#191817"
+          text="value: Pablo Picasso: Woman With a Mandolin. 1909; width: 3; align: center"></a-plane>
+      </a-entity>
+       
+      <a-entity id="michelledisplay" position="-8 3 -14.9">
+         <a-plane id="michelleframe" color="#191817" width="3" height="4" position="0 2 0"></a-plane>
+         <a-plane id="michellepainting" src="#michelle" position="0 2 .1" width="2.5" height="3.5" ></a-plane>
+         <a-plane id="michellecaption" position="0 -1 .01" height=".6" width="auto" color="#191817"
+          text="value: Amy Sherald: First Lady Michelle Obama. 2018; width: 3; align: center"></a-plane>
+      </a-entity>
+       
+      <a-entity id="barackdisplay" position="8 3 -14.9">
+         <a-plane id="barackframe" color="#191817" width="3" height="4" position="0 2 0"></a-plane>
+         <a-plane id="barackpainting" src="#barack" position="0 2 .1" width="2.5" height="3.5" ></a-plane>
+         <a-plane id="barackcaption" position="0 -1 .01" height=".6" width="auto" color="#191817"
+          text="value: Kehinde Wiley: President Barack Obama. 2018; width: 3; align: center"></a-plane>
+      </a-entity>
+       
+      <!-- CLOTHES -->
+      <a-entity id="skirthoodie" position="14.29743 0 -12.73435">
+         <a-gltf-model position="-1.3 -2.7 2.6" rotation="0 248.90290119485175 -3.0860305223652293" src="#skirthoodie" scale="0.05 0.05 0.05" animation="property:rotation;to:0 360 0;easing:easeInOutSine;dur:30000;loop:NaN;elasticity:0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity id="jacket" position="13 3 -5">
+         <a-gltf-model position="0 0 0" rotation="0 248.90290119485175 -3.0860305223652293" src="#jacket" scale="2 2 2"></a-gltf-model>
+      </a-entity>
+
+      <a-entity id="skirt" position="8.68321 3.61347 0.85888">
+         <a-gltf-model position="4.35457 -3.55244 0" rotation="0 100 -5" src="#skirt" scale="0.0025 0.0025 0.0025"></a-gltf-model>
+      </a-entity>
+
+      <a-entity id="woman" position="8.94798 3.61347 4.11851">
+         <a-gltf-model position="0 -3.33144 0" rotation="0 270 0" src="#woman" scale="0.02 0.02 0.02"></a-gltf-model>
+      </a-entity>
+       
+      <!-- MUSIC -->
+      <a-entity id="musicpanel1" position="-14.9 7 -8" rotation="0 90 0" sound="src: #song1">
+
+         <a-plane width="2.5" height="3.5" position="0 -.06 0" shader="flat" src="#cover1" side="double"  ></a-plane>
+         <a-plane position="0 -.5 .01" width="2" height=".5" transparent="true" opacity=".9" color="#191817"        
+                  text="value: Artist - Chris JuPetty\n Song - Be Good; width: 4; align:center"></a-plane>
+         
+         <a-plane id="playbox"  depth=".01" scale=".3 .3 .3" position="-.673 -1.22 .01" shader="flat" width="2" height="2"
+         material="color:#191817; shader: flat" transparent="true" opacity=".9" songplayer>
+            <a-triangle id="playicon" color="white" depth=".01" scale="1 1 1" rotation="0 0 -90" 
+            position=".1 -.02 .06" shader="flat" width="2" height="2" vertex-a="0 .3 0" >
+           </a-triangle>
+        </a-plane> 
+         
+        <a-plane id="stopbox"  scale=".3 .3 .3" position="0 -1.22 .01" shader="flat" width="2" height="2"
+        material="color:#191817; shader: flat" transparent="true" opacity=".9"  songstopper>
+            <a-plane id="stopicon" color="white" scale="1 1 1" position="0 0 .06" 
+             shader="flat" width="1" height="1"  >
+           </a-plane>
+        </a-plane>
+
+        <a-plane id="pausebox" scale=".3 .3 .3" position=".673 -1.22 .01" shader="flat" width="2" height="2"
+        material="color:#191817; shader: flat" transparent="true" opacity=".9" songpause>
+           <a-plane id="pauseiconleft" color="white" depth=".1" scale="1 1 1" 
+           position="-.4 0 .06" shader="flat" width=".5" height="1"  ></a-plane>
+           <a-plane id="pauseiconright" color="white" depth=".1" scale="1 1 1" 
+           position=".4 0 .06" shader="flat" width=".5" height="1"></a-plane>
+        </a-plane>
+     
+      </a-entity> 
+
+      <a-entity id="musicpanel2" position="-14.9 3 -8" rotation="0 90 0" sound="src: #song2">
+
+          <a-plane width="2.5" height="3.5" position="0 -.06 0" shader="flat" src="#cover2" side="double"  ></a-plane>
+          <a-plane position="0 -.5 .01" width="2" height=".5" transparent="true" opacity=".9" color="#191817"        
+                   text="value: Artist - Chris JuPetty\n Song - On My Way; width: 4; align:center"></a-plane>
+          
+          <a-plane id="playbox"  depth=".01" scale=".3 .3 .3" position="-.673 -1.22 .01" shader="flat" width="2" height="2"
+          material="color:#191817; shader: flat" transparent="true" opacity=".9" songplayer2>
+             <a-triangle id="playicon" color="white" depth=".01" scale="1 1 1" rotation="0 0 -90" 
+             position=".1 -.02 .06" shader="flat" width="2" height="2" vertex-a="0 .3 0" >
+            </a-triangle>
+         </a-plane> 
+          
+         <a-plane id="stopbox"  scale=".3 .3 .3" position="0 -1.22 .01" shader="flat" width="2" height="2"
+         material="color:#191817; shader: flat" transparent="true" opacity=".9"  songstopper2>
+             <a-plane id="stopicon" color="white" scale="1 1 1" position="0 0 .06" 
+              shader="flat" width="1" height="1"  >
+            </a-plane>
+         </a-plane>
+
+         <a-plane id="pausebox" scale=".3 .3 .3" position=".673 -1.22 .01" shader="flat" width="2" height="2"
+         material="color:#191817; shader: flat" transparent="true" opacity=".9" songpause2>
+            <a-plane id="pauseiconleft" color="white" depth=".1" scale="1 1 1" 
+            position="-.4 0 .06" shader="flat" width=".5" height="1"  ></a-plane>
+            <a-plane id="pauseiconright" color="white" depth=".1" scale="1 1 1" 
+            position=".4 0 .06" shader="flat" width=".5" height="1"></a-plane>
+         </a-plane>
+      
+      </a-entity> 
+
+      <a-entity id="musicpanel3" position="-14.9 3 -12" rotation="0 90 0" sound="src: #song3">
+
+          <a-plane width="2.5" height="3.5" position="0 -.06 0" shader="flat" src="#cover3" side="double"  ></a-plane>
+          <a-plane position="0 -.5 .01" width="2" height=".5" transparent="true" opacity=".9" color="#191817"        
+                   text="value: Artist - Chris JuPetty\n Song - Smooth Operator; width: 4; align:center"></a-plane>
+          
+          <a-plane id="playbox"  depth=".01" scale=".3 .3 .3" position="-.673 -1.22 .01" shader="flat" width="2" height="2"
+          material="color:#191817; shader: flat" transparent="true" opacity=".9" songplayer3>
+             <a-triangle id="playicon" color="white" depth=".01" scale="1 1 1" rotation="0 0 -90" 
+             position=".1 -.02 .06" shader="flat" width="2" height="2" vertex-a="0 .3 0" >
+            </a-triangle>
+         </a-plane> 
+          
+         <a-plane id="stopbox"  scale=".3 .3 .3" position="0 -1.22 .01" shader="flat" width="2" height="2"
+         material="color:#191817; shader: flat" transparent="true" opacity=".9"  songstopper3>
+             <a-plane id="stopicon" color="white" scale="1 1 1" position="0 0 .06" 
+              shader="flat" width="1" height="1"  >
+            </a-plane>
+         </a-plane>
+
+         <a-plane id="pausebox" scale=".3 .3 .3" position=".673 -1.22 .01" shader="flat" width="2" height="2"
+         material="color:#191817; shader: flat" transparent="true" opacity=".9" songpause3>
+            <a-plane id="pauseiconleft" color="white" depth=".1" scale="1 1 1" 
+            position="-.4 0 .06" shader="flat" width=".5" height="1"  ></a-plane>
+            <a-plane id="pauseiconright" color="white" depth=".1" scale="1 1 1" 
+            position=".4 0 .06" shader="flat" width=".5" height="1"></a-plane>
+         </a-plane>
+      
+      </a-entity> 
+
+      <a-entity id="musicpanel4" position="-14.9 7 -12" rotation="0 90 0" sound="src: #song4">
+
+         <a-plane width="2.5" height="3.5" position="0 -.06 0" shader="flat" src="#cover4" side="double"  ></a-plane>
+         <a-plane position="0 -.5 .01" width="2" height=".5" transparent="true" opacity=".9" color="#191817"        
+                  text="value: Artist - Chris JuPetty\n Song - $$$ freestyle; width: 4; align:center"></a-plane>
+         
+         <a-plane id="playbox"  depth=".01" scale=".3 .3 .3" position="-.673 -1.22 .01" shader="flat" width="2" height="2"
+         material="color:#191817; shader: flat" transparent="true" opacity=".9" songplayer4>
+            <a-triangle id="playicon" color="white" depth=".01" scale="1 1 1" rotation="0 0 -90" 
+            position=".1 -.02 .06" shader="flat" width="2" height="2" vertex-a="0 .3 0" >
+           </a-triangle>
+        </a-plane> 
+         
+        <a-plane id="stopbox"  scale=".3 .3 .3" position="0 -1.22 .01" shader="flat" width="2" height="2"
+        material="color:#191817; shader: flat" transparent="true" opacity=".9"  songstopper4>
+            <a-plane id="stopicon" color="white" scale="1 1 1" position="0 0 .06" 
+             shader="flat" width="1" height="1"  >
+           </a-plane>
+        </a-plane>
+
+        <a-plane id="pausebox" scale=".3 .3 .3" position=".673 -1.22 .01" shader="flat" width="2" height="2"
+        material="color:#191817; shader: flat" transparent="true" opacity=".9" songpause4>
+           <a-plane id="pauseiconleft" color="white" depth=".1" scale="1 1 1" 
+           position="-.4 0 .06" shader="flat" width=".5" height="1"  ></a-plane>
+           <a-plane id="pauseiconright" color="white" depth=".1" scale="1 1 1" 
+           position=".4 0 .06" shader="flat" width=".5" height="1"></a-plane>
+        </a-plane>
+     
+      </a-entity> 
+
+      <!-- SOLANGE -->
+      <a-video id="solange" src="#videoclip" position="-14.9 5.0538 4.53473" rotation="0 90 0" width="10" height="5" material="" geometry="width:20;height:8">
+         
+       <a-plane id="vidplaybox" depth=".01" scale="0.3 0.3 0.3" position="-0.35 -2 0.01" shader="flat" width="2" height="2" material="color:#191817" transparent="true" opacity=".9" videoplayer="" geometry="">
+         <a-triangle id="vidplayicon" color="white" depth=".01" scale="" rotation="0 0 -90" position="0.1 -0.02 0.06" shader="flat" width="2" height="2" vertex-a="0 .3 0" material="" geometry="">
+         </a-triangle>
+       </a-plane> 
+
+       <a-plane id="vidpausebox" scale="0.3 0.3 0.3" position="0.35 -2 0.01" shader="flat" width="6" height="3.5" material="color:#191817" transparent="true" opacity=".9" videopause="" geometry="">
+         <a-plane id="vidpauseiconleft" color="white" depth=".1" scale="" position="-0.4 0 0.06" shader="flat" width=".5" height="1" material="" geometry=""></a-plane>
+         <a-plane id="vidpauseiconright" color="white" depth=".1" scale="" position="0.4 0 0.06" shader="flat" width=".5" height="1" material="" geometry=""></a-plane>
+       </a-plane>
+       
+      </a-video>
+       
+      
+   </a-scene>
+    
+  </body>
+  
+</html>
