@@ -21,7 +21,7 @@
             <!-- GLTF's -->
             <a-assets>
                 <a-asset-item
-                    id="animated-asset"
+                    id="pants-asset"
                     src="assets/asset.gltf"
                 ></a-asset-item>
                 <a-asset-item
@@ -32,10 +32,6 @@
                     id="jacket-asset"
                     src="assets/jacket.gltf"
                 ></a-asset-item>
-                <!-- <a-asset-item
-                    id="blackwoman-asset"
-                    src="assets/blackwoman/scene.gltf"
-                ></a-asset-item> -->
             </a-assets>
 
             <!-- Pants -->
@@ -43,7 +39,7 @@
                 id="animated-marker"
                 type="pattern"
                 preset="custom"
-                url="assets/marker.patt"
+                url="assets/pants.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -53,7 +49,7 @@
                     id="bowser-model"
                     scale="0.9999999941006306 0.9999999941006306 0.9999999941006306"
                     animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
+                    gltf-model="#pants-asset"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -68,7 +64,7 @@
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
+                id="markerC"
             >
                 <a-entity
                     id="bowser-model"
@@ -100,27 +96,6 @@
                     gesture-handler
                 ></a-entity>
             </a-marker>
-
-            <!-- Black Woman -->
-            <!-- <a-marker
-                id="animated-woman"
-                type="pattern"
-                preset="custom"
-                url="assets/blackwoman/black-woman.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
-                <a-entity
-                    id="bowser-model"
-                    scale="0.002389720947315638 0.002389720947315638 0.002389720947315638"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#blackwoman-asset"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
-            </a-marker> -->
 
             <a-entity camera></a-entity>
         </a-scene>
