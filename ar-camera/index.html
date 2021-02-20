@@ -64,7 +64,7 @@
                     id="jacket-asset"
                     src="assets/jacket.gltf"
                 ></a-asset-item>
-                <!-- <video
+                <video
                     src="https://cdn.glitch.com/1b5e4075-394c-40aa-84fe-42a3dda1ad50%2Fbstroy.mp4?v=1612554255804"
                     preload="auto"
                     id="vid"
@@ -75,7 +75,7 @@
                     muted
                     webkit-playsinline
                     playsinline
-                ></video> -->
+                ></video>
             </a-assets>
 
             <!-- Pants -->
@@ -146,7 +146,7 @@
 
             <!-- Video -->
             <!-- we use cors proxy to avoid cross-origin problems -->
-            <!-- <a-nft
+            <a-nft
                 videohandler
                 type="nft"
                 url="https://cdn.glitch.com/1b5e4075-394c-40aa-84fe-42a3dda1ad50%2Fvideo.png?v=1613508904297"
@@ -155,9 +155,14 @@
                 smoothtolerance="0.01"
                 smooththreshold="5"
             >
-                <a-video src="#vid" position="50 150 -100" width="300" height="175">
+                <a-video 
+                    src="#vid" 
+                    position="0 0.3 1" 
+                    width="300" 
+                    height="175"
+                >
                 </a-video>
-            </a-nft> -->
+            </a-nft>
 
             <a-entity camera></a-entity>
         </a-scene>
