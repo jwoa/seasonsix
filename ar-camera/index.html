@@ -40,7 +40,31 @@
           </script>
     </head>
 
+    <style>
+        .arjs-loader {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .arjs-loader div {
+            text-align: center;
+            font-size: 1.25em;
+            color: white;
+        }
+    </style>
+
     <body style="margin: 0; overflow: hidden;">
+        <div class="arjs-loader">
+            <div>Loading, please wait...</div>
+        </div>
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: true;"
@@ -64,7 +88,7 @@
                     id="jacket-asset"
                     src="assets/jacket.gltf"
                 ></a-asset-item>
-                <video
+                <!-- <video
                     src="https://cdn.glitch.com/1b5e4075-394c-40aa-84fe-42a3dda1ad50%2Fbstroy.mp4?v=1612554255804"
                     preload="auto"
                     id="vid"
@@ -75,7 +99,11 @@
                     muted
                     webkit-playsinline
                     playsinline
-                ></video>
+                ></video> -->
+                <video src="https://cors-anywhere.herokuapp.com/https://www.w3schools.com/html/mov_bbb.mp4"
+                    preload="auto" id="vid" response-type="arraybuffer" loop
+                    crossorigin webkit-playsinline autoplay muted playsinline>
+                </video>
             </a-assets>
 
             <!-- Pants -->
@@ -146,7 +174,7 @@
 
             <!-- Video -->
             <!-- we use cors proxy to avoid cross-origin problems -->
-            <a-nft
+            <!-- <a-nft
                 videohandler
                 type="nft"
                 url="https://cdn.glitch.com/1b5e4075-394c-40aa-84fe-42a3dda1ad50%2Fvideo.png?v=1613508904297"
@@ -161,6 +189,19 @@
                     width="300" 
                     height="175"
                 >
+                </a-video>
+            </a-nft> -->
+            <a-nft
+                videohandler
+                type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/data/dataNFT/pinball'
+                smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
+            >
+                <a-video
+                    src="#vid"
+                    position='50 150 -100'
+                    width='300'
+                    height='175'
+                    >
                 </a-video>
             </a-nft>
 
