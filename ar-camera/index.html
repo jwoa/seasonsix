@@ -64,7 +64,7 @@
                     id="jacket-asset"
                     src="assets/jacket.gltf"
                 ></a-asset-item>
-                <video
+                <!-- <video
                     src="https://cdn.glitch.com/1b5e4075-394c-40aa-84fe-42a3dda1ad50%2Fbstroy.mp4?v=1612554255804"
                     preload="auto"
                     id="vid"
@@ -75,7 +75,7 @@
                     muted
                     webkit-playsinline
                     playsinline
-                ></video>
+                ></video> -->
             </a-assets>
 
             <!-- Pants -->
@@ -92,8 +92,7 @@
                 <a-entity
                     id="bowser-model"
                     scale="1 1 1"
-                    animation-mixer="loop: repeat"
-                    position="0 0.3 0"
+                    position="0 0.5 0"
                     gltf-model="#pants-asset"
                     class="clickable"
                     gesture-handler
@@ -114,7 +113,7 @@
                 <a-entity
                     id="bowser-model"
                     scale="0.02 0.02 0.02"
-                    position="0 0.3 0"
+                    position="0 0.5 0"
                     animation__hover="property: position; dur: 2000; loop: true; dir:alternate; to: 0 1 0;"
                     animation__spin="property: rotation; dur: 12000; loop: true; to: 0 1490 0;"
                     gltf-model="#hoodie-asset"
@@ -139,7 +138,7 @@
                     scale="1 1 1"
                     animation-mixer="loop: repeat"
                     gltf-model="#jacket-asset"
-                    position="0 0.3 0"
+                    position="0 0.5 0"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -147,7 +146,7 @@
 
             <!-- Video -->
             <!-- we use cors proxy to avoid cross-origin problems -->
-            <a-nft
+            <!-- <a-nft
                 videohandler
                 type="nft"
                 url="https://cdn.glitch.com/1b5e4075-394c-40aa-84fe-42a3dda1ad50%2Fvideo.png?v=1613508904297"
@@ -158,7 +157,7 @@
             >
                 <a-video src="#vid" position="50 150 -100" width="300" height="175">
                 </a-video>
-            </a-nft>
+            </a-nft> -->
 
             <a-entity camera></a-entity>
         </a-scene>
