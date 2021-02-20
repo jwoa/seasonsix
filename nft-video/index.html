@@ -13,10 +13,15 @@
                     this.vid.play();
                 }.bind(this));
     
-		marker.addEventListener('markerLost', function() {
-			this.vid.pause();
-			this.vid.currentTime = 0;
-		}.bind(this));
+                marker.addEventListener('markerLost', function() {
+                    this.vid.pause();
+                    this.vid.currentTime = 0;
+                }.bind(this));
+                
+                marker.addEventListener('click', function() {
+                    this.vid.play();
+                    alert("Clicked Video");
+                }.bind(this));
             }
         });
     };
@@ -45,7 +50,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>Loading, please wait...</div>
+        <div>Loading your experience . . . </div>
     </div>
     <a-scene
         vr-mode-ui="enabled: false;"
